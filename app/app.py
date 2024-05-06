@@ -38,8 +38,6 @@ if 'login' not in st.session_state or not st.session_state['login']:
     st.title('Login')
     login_id = st.text_input('User ID:')
     if st.button('Login'):
-        # ตรวจสอบผู้ใช้
-        st.success('Logged in successfully!')
         st.session_state['login'] = True
         st.session_state['user_id'] = login_id  # จัดเก็บ ID ผู้ใช้ในเซสชัน
 

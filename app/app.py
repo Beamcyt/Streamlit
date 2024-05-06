@@ -109,7 +109,3 @@ elif 'predictions' in st.session_state:
     st.write('---')
     st.title(f'Total CEFR Level: {st.session_state["final_cefr_level"]}')
     st.write('---')
-    if st.button('Reset'):
-        st.session_state.pop('predictions', None)
-        st.session_state.pop('total_score', None)
-        st.session_state.pop('final_cefr_level', None)

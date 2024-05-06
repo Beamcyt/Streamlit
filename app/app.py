@@ -100,8 +100,6 @@ elif 'login' in st.session_state and st.session_state['login'] and 'predictions'
             st.session_state['total_score'] = total_score
             st.session_state['final_cefr_level'] = final_cefr_level
 
-            st.experimental_rerun()
-
 # Completion page
 elif 'predictions' in st.session_state:
     st.title(f'User ID: {st.session_state["user_id"]}')
@@ -115,4 +113,3 @@ elif 'predictions' in st.session_state:
         st.session_state.pop('predictions', None)
         st.session_state.pop('total_score', None)
         st.session_state.pop('final_cefr_level', None)
-        st.experimental_rerun()

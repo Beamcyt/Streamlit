@@ -33,18 +33,18 @@ cefr_levels = {'A1': 1, 'A2': 2, 'B1': 3, 'B2': 4, 'C1': 5, 'C2': 6}
 # Main application
 st.image('app/static/image/cefr_logo.png')
 
-# Login page
-if 'login' not in st.session_state or not st.session_state['login']:
-    st.title('Login')
-    login_id = st.text_input('User ID:')
-    if st.button('Login'):
+# submit page
+if 'submit' not in st.session_state or not st.session_state['submit']:
+    st.title('User Input ID')
+    submit_id = st.text_input('User ID:')
+    if st.button('submit'):
         # ตรวจสอบผู้ใช้
-        st.success('Logged in successfully!')
-        st.session_state['login'] = True
-        st.session_state['user_id'] = login_id  # จัดเก็บ ID ผู้ใช้ในเซสชัน
+        st.success('Sumbnit in successfully!')
+        st.session_state['submit'] = True
+        st.session_state['user_id'] = submit_id  # จัดเก็บ ID ผู้ใช้ในเซสชัน
 
 # Quiz page
-elif 'login' in st.session_state and st.session_state['login'] and 'predictions' not in st.session_state:
+elif 'submit' in st.session_state and st.session_state['submit'] and 'predictions' not in st.session_state:
     st.title('Quiz')
     
     st.image('app/static/image/1.jpg')
